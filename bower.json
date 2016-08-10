@@ -1,0 +1,27 @@
+{
+  "name": "jquery-sticky-bootstrap-tabs",
+  "version": "1.2.4",
+  "homepage": "https://github.com/bluora/jquery-sticky-bootstrap-tabs",
+  "authors": [
+    "Aidan Lister <aidan@aidanlister.com>",
+    "Rocco Howard <rocco@bluora.com.au>"
+  ],
+  "description": "Provides persistant state (back and forward button support) for Bootstrap tabs.",
+  "main": "jquery.sticky.bootstrap.tabs.js",
+  "keywords": [
+    "bootstrap",
+    "jquery"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": ">= 2.3.0",
+    "jquery": ">= 1.9.0"
+  }
+}
