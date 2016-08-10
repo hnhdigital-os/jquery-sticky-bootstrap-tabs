@@ -13,6 +13,7 @@
       selectorAttribute: "href",
       backToTop: false,
       showParentTabs: false,
+      showTabUsingClickTrigger: false,
       initialTab: $('li.active > a', context)
     }, options );
 
@@ -24,7 +25,11 @@
         if (settings.showParentTabs === true) {
           showParentTabs(hash);
         }
-        $(selector, context).tab('show');
+        if (settings.showTabUsingClickTrigger === true) {
+          $(selector, context).trigger('click');
+        } else {
+          $(selector, context).tab('show');
+        }
         setTimeout(backToTop, 1);
       }
     }
