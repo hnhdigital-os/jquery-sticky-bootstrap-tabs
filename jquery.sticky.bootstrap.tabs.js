@@ -27,6 +27,7 @@
         }
         if (settings.showTabUsingClickTrigger === true) {
           $(selector, context).trigger('click');
+          $(selector, context).trigger('shown.bs.tab');
         } else {
           $(selector, context).tab('show');
         }
