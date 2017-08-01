@@ -2,7 +2,7 @@
  * jQuery Plugin: Sticky Bootstrap Tabs
  *
  * @author Aidan Lister <aidan@php.net>
- * @author Rocco Howard <rocco@bluora.com.au>
+ * @author Rocco Howard <rocco@hnh.digital>
  */
 (function ( $ ) {
   $.fn.stickyTabs = function( options ) {
@@ -27,7 +27,6 @@
         }
         if (settings.showTabUsingClickTrigger === true) {
           $(selector, context).trigger('click');
-          $(selector, context).trigger('shown.bs.tab');
         } else {
           $(selector, context).tab('show');
         }
@@ -64,7 +63,7 @@
     }
 
     // Set the correct tab when the page loads
-    showTabFromHash();
+    $(document).ready(showTabFromHash);
 
     // Set the correct tab when a user uses their back/forward button
     $(window).on('hashchange', showTabFromHash);
