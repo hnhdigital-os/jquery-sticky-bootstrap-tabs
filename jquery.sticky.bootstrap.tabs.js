@@ -71,7 +71,7 @@
     // Change the URL when tabs are clicked
     $('a', context).on('click', function(e) {
       var hash = this.href.split('#')[1];
-      if (typeof hash != 'undefined' && hash != '') {
+      if (typeof hash != 'undefined' && hash != '' && typeof $(this).data('not-sticky') == 'undefined') {
         var adjustedhash = settings.getHashCallback(hash, this);
         changeHash(adjustedhash);
         setTimeout(backToTop, 1);
